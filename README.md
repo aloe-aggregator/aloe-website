@@ -21,7 +21,7 @@ meteor --settings settings.json
 Deployment (Prod)
 ----------------
    
-More explanations on our website [docker](https://www.github.com/docker-aloe)
+More explanations on our website [docker](#) (coming soon)
 
 ===============================================================================
 
@@ -38,7 +38,7 @@ Lancement (Dev)
 ---------------
 
 ```
-git clone http://lien aloe
+git clone https://github.com/aloe-aggregator/aloe-website.git aloe
 cd aloe
 meteor --settings settings.json
 ```
@@ -46,4 +46,4 @@ meteor --settings settings.json
 Déploiement (Prod)
 ----------------
    
-Plus d'explication sur notre page [docker](https://www.github.com/docker-aloe)
+Plus d'explication sur notre page [docker](#) (prochainement)
