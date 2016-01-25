@@ -1,5 +1,3 @@
-# aloe-website
-
 English
 -------
 A.L.O.E - Agrégateur en Ligne d'Offre d'Emploi (online job offers aggregator)
@@ -13,7 +11,7 @@ Launch (Dev)
 ---------------
 
 ```
-git clone https://github.com/aloe-aggregator/aloe-website.git aloe
+git clone http://lien aloe
 cd aloe
 meteor --settings settings.json
 ```
@@ -21,7 +19,7 @@ meteor --settings settings.json
 Deployment (Prod)
 ----------------
    
-More explanations on our website [docker](#) (coming soon)
+More explanations on our website [docker](https://github.com/aloe-aggregator/aloe-docker)
 
 ===============================================================================
 
@@ -38,7 +36,7 @@ Lancement (Dev)
 ---------------
 
 ```
-git clone https://github.com/aloe-aggregator/aloe-website.git aloe
+git clone http://lien aloe
 cd aloe
 meteor --settings settings.json
 ```
@@ -46,4 +44,8 @@ meteor --settings settings.json
 Déploiement (Prod)
 ----------------
    
-Plus d'explication sur notre page [docker](#) (prochainement)
+Plus d'explication sur notre page [docker](https://github.com/aloe-aggregator/aloe-docker)
+
+Projet pour [3IL](http://www.3il-ingenieurs.fr) 
+ ![logo 3IL](https://upload.wikimedia.org/wikipedia/fr/thumb/d/dc/3il_ingenieurs_logo.jpg/800px-3il_ingenieurs_logo.jpg)
+
