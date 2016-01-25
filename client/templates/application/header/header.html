@@ -1,0 +1,13 @@
+<template name="header">
+	<header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+      	<span class="mdl-layout-title">
+      		<a href="{{pathFor 'home'}}" title="Accueil">Accueil</a>
+      		{{#if pageName}}
+      			<i class="material-icons">&#xE315;</i><a href="#" title="{{pageName}}">{{pageName}}</a>
+      		{{/if}}
+      	</span>
+        <div class="mdl-layout-spacer"></div>
+      </div>
+    </header>
+</template>

@@ -1,0 +1,326 @@
+/* Using CSS3 var - Disabled atm */
+/*:root {
+  --font-main:'Hind Vadodara';
+  --color-accent:rgb(144,169,85);
+  --color-accent-25:rgba(144,169,85,.25);
+  --color-accent-50:rgba(144,169,85,.5);
+  --color-accent-75:rgba(144,169,85,.75);
+  --color-main:rgb(121,85,72);
+  --color-main-25:rgba(121,85,72,.25);
+  --color-main-50:rgba(121,85,72,.5);
+  --color-main-75:rgba(121,85,72,.75);
+}*/
+
+/* Global customization - Start */
+  #logo {
+    margin:50px 0 30px 0;
+    height: 50%;
+  }
+
+  .mdl-layout__container {
+    background-color: #F2F2F2;
+  }
+  p {
+    line-height: 100%;
+    text-align: justify;
+  }
+  #offer-info>.mdl-card__supporting-text p {
+    text-align: left;
+  }
+  .mdl-layout__content {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+  }
+  .mdl-mini-footer {
+    padding: 16px 8px;
+    line-height: 18px;
+  }
+  .websites-list{
+    display: block;
+    margin-bottom: 10px;
+  }
+  .errors {
+    z-index: 1000;
+    background-color: rgba(255,255,255,.6);
+  }
+  .mdl-layout-title > a {
+    text-decoration: none;
+    color:white;
+  }
+  .mdl-layout-title > .material-icons {
+    vertical-align:middle;
+  }
+  @media (max-width: 750px) and (min-width: 700px), (max-width: 400px) and (min-width: 380px) {
+    #offer-info>.mdl-card__title>.mdl-card__title-text {
+      font-size: 22px;
+    }
+  }
+  @media (max-width: 700px) and (min-width: 650px), (max-width: 380px) and (min-width: 360px) {
+    #offer-info>.mdl-card__title>.mdl-card__title-text {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 650px) and (min-width: 600px){
+    #offer-info>.mdl-card__title>.mdl-card__title-text {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 600px)  and (min-width: 480px), (max-width: 360px){
+    #offer-info>.mdl-card__title>.mdl-card__title-text {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 580px) {
+    #offer-grid>.mdl-layout-spacer {
+      display: none;
+    }
+  }
+/* Customize backgroudn color - End */
+
+/* Customize drawer menu - Start */
+  .drawer-element {
+    margin: 10px 20px;
+  }
+  .drawer-element h6 {
+    color: rgb(121,85,72);
+  }
+  /* Checkable website button - Start*/
+    .mdl-button--selectable-unchecked {
+      background-color: rgba(0,0,0,.25);
+    }
+    .mdl-button--selectable-unchecked:hover {
+      background-color: rgba(0,0,0,.25);
+    }
+    .mdl-button--selectable-unchecked>img{
+      opacity: .15;
+    }
+  /* Checkable website button - End*/
+
+  /* Customize switch - Start*/
+    .is-checked>.mdl-switch__thumb {
+      background-color: rgb(144,169,85) !important;
+    }
+    .is-checked>.mdl-switch__track {
+      background-color: rgba(144,169,85,.5) !important;
+    }
+    .mdl-switch {
+      text-align: left !important;
+    }
+    .mdl-switch.is-upgraded {
+      padding-left: 5px !important;
+    }
+    .mdl-switch__ripple-container {
+      left: 126px;
+    }
+    .mdl-switch__label {
+      left: 0;
+    }
+    .mdl-switch__track {
+      left: 140px;
+    }
+    .mdl-switch__thumb {
+      left: 140px;
+    }
+    .mdl-switch.is-checked .mdl-switch__thumb {
+      left: 156px;
+    }
+    .mdl-switch.is-checked .mdl-switch__ripple-container {
+      left: 142px;
+    }
+  /* Customize switch - Start*/
+/* Customize drawer menu - End */
+
+
+/* Customize mdl-select-field - Start */
+  /* Style Select Field */
+  select {
+    font-family: inherit;
+    background-color: transparent;
+    width: 100%;
+    padding: 4px 0;
+    font-size: 16px;
+    color: rgba(0,0,0, 0.30);
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0, 0.12);
+  }
+  /* Remove focus */
+  select:focus {
+    outline: none;
+  }
+  /* Hide label */
+  .mdl-selectfield label {
+    display: none;
+  }
+  /* Use custom arrow */
+  .mdl-selectfield select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  .mdl-selectfield {
+    font-family: 'Hind Vadodara','Helvetica','Arial',sans-serif;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+  }
+  .mdl-selectfield:after {
+    position: absolute;
+    top: 0.75em;
+    right: 0.5em;
+    /* Styling the down arrow */
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: .25em solid transparent;
+    border-right: .25em solid transparent;
+    border-top: 0.375em solid rgba(0,0,0, 0.12);
+    pointer-events: none;
+  }
+/* Customize mdl-select-field - End */
+
+/* Customize modal - Start */
+  .anti-modal-footer{
+    background-color: #FFF;
+  }
+  .anti-modal-header{
+    color: #666;
+    background-color: #FFF;
+    border-bottom: 3px solid transparent;
+    border-width: 0 0 3px 0;
+    -moz-border-image: -moz-linear-gradient(left, rgb(144,169,85) 0%, #FFF 100%);
+    -webkit-border-image: -webkit-linear-gradient(left, rgb(144,169,85) 0%, #FFF 100%);
+    border-image: linear-gradient(to right, rgb(144,169,85) 0%, #FFF 100%);
+    border-image-slice: 1;
+  }
+  .anti-modal-body{
+    background-color: #FFF;
+    border-bottom: 3px solid transparent;
+    border-width: 0 0 3px 0;
+    -moz-border-image: -moz-linear-gradient(left, rgb(144,169,85) 0%, #FFF 100%);
+    -webkit-border-image: -webkit-linear-gradient(left, rgb(144,169,85) 0%, #FFF 100%);
+    border-image: linear-gradient(to right, rgb(144,169,85) 0%, #FFF 100%);
+    border-image-slice: 1;
+  }
+/* Customize modal - End */
+
+
+/* Customize mdl-card - Start */
+  .mdl-card__menu {
+    color: rgb(144,169,85);
+  }
+  .mdl-card__title {
+    color: rgba(0, 0, 0, .7);
+  }
+  .search-item .mdl-card__title-text {
+    display:inline-block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+
+  .mdl-card__supporting-text {
+    border-bottom: 3px solid transparent;
+    border-width: 0 0 3px 0;
+    -moz-border-image: -moz-linear-gradient(left, rgb(144,169,85) 0%, #FFF 100%);
+    -webkit-border-image: -webkit-linear-gradient(left, rgb(144,169,85) 0%, #FFF 100%);
+    border-image: linear-gradient(to right, rgb(144,169,85) 0%, #FFF 100%);
+    border-image-slice: 1;
+  }
+  .mdl-card__title {
+    height: 83px;
+    border-bottom: 3px solid transparent;
+    border-width: 0 0 3px 0;
+    -moz-border-image: -moz-linear-gradient(left, rgb(144,169,85) 0%, #FFF 100%);
+    -webkit-border-image: -webkit-linear-gradient(left, rgb(144,169,85) 0%, #FFF 100%);
+    border-image: linear-gradient(to right, rgb(144,169,85) 0%, #FFF 100%);
+    border-image-slice: 1;
+  }
+  .mdl-card__actions.mdl-card--border {
+    border-top: none !important;
+  }
+/* Customize mdl-card - End */
+
+/* Customize offer presentation - Start */
+  #offer-info {
+    max-width: 250px;
+    min-width: 125px;
+  }
+  #offer-info>.mdl-card__supporting-text {
+    margin: 10px 5px 0 0;
+    border-bottom: none;
+  }
+  #offer-description {
+    min-width: 400px;
+  }
+  #offer-description>.mdl-card__title {
+    margin-top: 10px;
+  }
+  #offer-description>.mdl-card__supporting-text h1,#offer-description>.mdl-card__supporting-text h2,#offer-description>.mdl-card__supporting-text h3,#offer-description>.mdl-card__supporting-text h4,#offer-description>.mdl-card__supporting-text h5,#offer-description>.mdl-card__supporting-text h6 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 20px 0;
+    color: rgb(121,85,72);
+    border-bottom: 2px solid rgba(121,85,72,.5);
+    display: block;
+  }
+  #offer-description>.mdl-card__supporting-text p{
+    line-height: 18px;
+  }
+  #offer-description>.mdl-card__actions>p:last-child {
+    margin-bottom: 0; 
+  }
+/* Customize offer presentation - End */
+
+/* Customize load-more button on search result page - Start */
+  #load-more {
+    text-decoration: none;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.05);
+    text-align: center;
+    line-height: 30px;
+  }
+  #load-more:hover {
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  #load-more>a{
+    text-decoration: none;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.05);
+    text-align: center;
+    line-height: 30px;
+  }
+  #load-more>a:hover {
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.1);
+  }
+/* Customize load-more button on search result page - End */
+
+/* DatePicker Pikaday Customize - Start */
+  .is-today .pika-button {
+    color: rgb(121,85,72);
+  }
+  .is-selected .pika-button {
+    background-color: rgb(121,85,72);
+  }
+  .pika-button:hover {
+    background-color: rgb(144,169,85) !important;
+  }
+/* DatePicker Pikaday Customize - End */
+
+.errors {
+  width: 300px;
+  position: absolute;
+  right: 0;
+}
+.errors .mdl-card__supporting-text {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+}

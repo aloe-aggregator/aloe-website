@@ -1,0 +1,39 @@
+{
+    "timeout": "5000",
+    "public": {
+        "gglKeyAPI": [
+        ],
+        "languages":{
+            "defaultLanguage": "fr",
+            "serverLanguage": "en",
+            "locale": "fr"
+        },
+        "legalNoticeVar":{
+            "domain":"www.aloe.fr",
+            "owner":"Aloe & co",
+            "ownerType":"Corporation",
+            "ownerAddress":"adress, city, country",
+            "inCharge":"Name",
+            "inChargeContact":"youremailhere@gmail.com",
+            "webmaster":"Name",
+            "webmasterContact":"youremailhere@gmail.com",
+            "host":"OVH",
+            "hostAddress":"2 rue Kellermann, 59100 Roubaix, France"
+        }
+    },
+    "contactEMail": "youremailhere@gmail.com",
+    "cacheLocationsRententionDelay": "30",
+    "minJaccardSimilarityThreshold": 68,
+    "minLevenshteinSimilarityThreshold": 90,
+    "cacheOffersRetentionDelay": {
+        "daysMax": 30,
+        "daysMin": 5
+    },
+    "cron": {
+        "dbClearOffersResidualData": "0 0 1 * *",
+        "dbClearLocation": "0 0 1 * *",
+        "dailyCacheUpdate": "0 0 * * *",
+        "intervalDays": 35
+    },
+    "sizeOfferSmallDescription": 250
+}

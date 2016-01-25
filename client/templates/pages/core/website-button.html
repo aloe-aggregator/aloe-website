@@ -1,0 +1,12 @@
+<template name="websiteButton">
+	<button 
+		id="{{website.name}}-{{website._id}}-{{url}}"
+		class="mdl-button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect"
+		style="margin-right:5px;" 
+	>
+		<img width="28" height="28" src="{{website.logo}}" alt="{{website.name}}">
+	</button>
+	<div class="mdl-tooltip" for="{{website.name}}-{{website._id}}-{{url}}">
+		<strong>{{website.name}}</strong>
+	</div>
+</template>

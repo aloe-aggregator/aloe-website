@@ -1,0 +1,57 @@
+<template name="search">
+	{{#each offers}}
+		{{> searchItem}}
+	{{/each}}
+	{{#if nextPath}}
+		<div class="mdl-grid">
+			<div class="mdl-layout-spacer"></div>
+			<div class="mdl-cell mdl-shadow--2dp mdl-cell--8-col" id="load-more">
+				<a href="{{nextPath}}" class="">
+		  			<h4>Resultats suivants... <i class="material-icons">&#xE5D5;</i></h4>
+				</a>
+			</div>
+			<div class="mdl-layout-spacer"></div>
+		</div>
+	{{else}}
+		{{#unless ready}}
+			{{> loading}}
+		{{/unless}}
+	{{/if}}
+</template>
+
+<template name="searchItem">
+	<div class="mdl-grid search-item">
+		<div class="mdl-layout-spacer"></div>
+		<div class="mdl-card search-card mdl-shadow--2dp mdl-cell mdl-cell--8-col">
+		  <div class="mdl-card__title">
+	    	<span class="mdl-card__title-text">{{position}}</span>
+		  </div>
+		  <div class="mdl-card__supporting-text">
+			<span class="websites-list">
+			{{#each websites}}
+				{{> websiteButton}}
+			{{/each}}
+			</span>
+			<strong>Description :</strong>
+			<p>{{{description.small}}}</p>
+			<p><strong>Localisation :</strong> {{location}}</p>
+		  	<p><strong>Société :</strong>
+		  		{{#if company}}
+		  			{{company}}
+		  		{{else}}
+		  			Non communiqué
+		  		{{/if}}
+		  	</p>
+		  </div>
+		  <div class="mdl-card__actions mdl-card--border">
+		    <a value="{{websitesToCSV websites}}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{pathFor 'offer'}}">
+		      Accéder à l'annonce <i class="material-icons">&#xE315;</i>
+		    </a>
+		  </div>
+		  <div class="mdl-card__menu">
+		    {{formatDate datePub}}
+		  </div>
+		</div>
+		<div class="mdl-layout-spacer"></div>
+	</div>
+</template>

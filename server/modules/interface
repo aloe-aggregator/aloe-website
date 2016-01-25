@@ -1,0 +1,94 @@
+searchMywebsite = function(search, userId) {
+    var website = Websites.findOne({
+        name: 'Mywebsite'
+    });
+
+    // CSS Selectors ( /!\ Complete method 'getSelectors' for your website in file 'general.js')
+    var selectors = getSelectors(website.name);
+    // Parameters initialisation
+    var options = initParamsMywebsite(search);
+
+    var link = website.url + '.....';
+    var offersNb = 0;
+    var offersNbSucces = 0;
+
+    var isLastPage = false;
+    var page = 1;
+    do {
+        try {
+            // Scrap start
+            var result = Meteor.http.get(link, options);
+            
+            if (result.statusCode < 200 || result.statusCode >= 300) {
+                Meteor.call('throwErrorWithLog', userId, ['public.error.scrapGeneral', website.name], 'statusCode = ' + result.statusCode + ' | URL = ' + link + ' | Options = ' + JSON.stringify(options));
+                return;
+            }
+        } catch (e) {
+            Meteor.call('throwErrorWithLog', userId, ['public.error.scrapGeneral', website.name], 'Exception = ' + JSON.stringify(e) + ' | URL = ' + link + ' | Options = ' + JSON.stringify(options));
+            return;
+        }
+
+        var $ = cheerio.load(result.content);
+
+        $(selectors.offerItem).each(function(index, el) {
+            offersNb++;
+            try {
+                var pageOffer = Meteor.http.get(url);
+
+                if (pageOffer.statusCode >= 200 && pageOffer.statusCode < 300) {
+                    var $$ = cheerio.load(pageOffer.content);
+                    // Fill out object 'offer'
+                    var offer = new Object();
+                    offer.search = search;
+                    offer.websites = [{
+                        website: website._id,
+                        url: offerLink
+                    }];
+                    offer.dateScrap = new Date();
+                    offer.salary = null;    // Si le site ne donne pas cette information
+                    offer.datePub = $(this).find(selectors.date).text();
+                    offer.position = $(this).find(selectors.position).text();
+                    offer.location = $(this).find(selectors.location).text();
+                    offer.company = $(this).find(selectors.company).text();
+                    offer.contractDisplayed = $(this).find(selectors.contract).text();
+                    offer.contractEquivalence = contractDisplayed.equivalence;
+                    offer.description = {
+                        small: $(this).find(selectors.descrSmall).text(),
+                        large: $$(selectors.descrLarge).html().trim()
+                    };
+
+                    insertOffersRaw(offer);
+                    offersNbSucces++;
+                } else {
+                    Meteor.call('insertLog', ['server.error.scrapGeneral', website.name], 'StatusCode = ' + page.statusCode + ' | URL = ' + url);
+                }
+            } catch (e) {
+                Meteor.call('insertLog', ['server.error.scrapGeneral', website.name], 'Exception = ' + JSON.stringify(e) + ' | URL = ' + url);
+            }
+        });
+
+        // Condition to know if the current page is the last page (<.......> : depends on your website)
+        if (.......) {
+            isLastPage = true;
+        } else {
+            page++;
+        }
+    } while (!isLastPage);
+    if (offersNb !== offersNbSucces) {
+        Meteor.call('throwErrorWithLog', userId,
+            offersNb - offersNbSucces + ' sur ' + offersNb + ' offres n\'ont pas pu être récupérées depuis le site ' + website.name + '.',
+            'offersNb:' + offersNb + ' - offersNbSucces:' + offersNbSucces);
+    }
+};
+
+initParamsMywebsite = function(search, options) {
+    var options = initParams();
+    var params = new Object();
+
+    // 'myParam' must be the exact name of your parameter
+    params.myParam = 'value';
+
+    options.params = params;
+
+    return options;
+};

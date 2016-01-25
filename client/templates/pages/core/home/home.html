@@ -1,0 +1,42 @@
+<template name="home">
+	<div class="mdl-grid mdl-typography--text-center">
+		<div class="mdl-layout-spacer"></div>
+		<div class="mdl-cell mdl-cell--4-col">
+			<img id="logo" src="/images/ALOE-LOGO.png" alt="LOGO">
+		</div>
+		<div class="mdl-layout-spacer"></div>
+	</div>
+	<form id="form-search">
+		<div class="mdl-grid mdl-typography--text-center">
+			<div class="mdl-layout-spacer"></div>
+			<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				  <input class="mdl-textfield__input" tabindex="1" type="text" id="keyword" />
+				  <label class="mdl-textfield__label" for="keyword">Mots-clefs...</label>
+				  <span class="mdl-textfield__error" for="keyword-drawer">Saisir au moins un mot-clef</span>
+				</div>
+		  	</div>
+			<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone">
+			    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			      <input class="mdl-textfield__input" tabindex="2" type="text" id="location" placeholder=""/>
+			      <label class="mdl-textfield__label" for="location">Localisation...</label>
+				  <span class="mdl-textfield__error" for="keyword-drawer">Sélectionner un localisation proposée</span>
+			    </div>
+			    <input type="hidden" id="hide-location" value=""/>
+			    <input type="hidden" id="hide-location-id" value=""/>
+		  	</div>
+			<div class="mdl-layout-spacer"></div>
+		</div>
+		<div class="mdl-grid mdl-typography--text-center">
+			<div class="mdl-layout-spacer"></div>
+			<div class="mdl-cell mdl-cell--6-col">
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" tabindex="3">
+					Rechercher <i class="material-icons">&#xE8B6;</i>
+				</button>
+				<input type="submit" style="display:none">
+		  		<a href="" id="adv-search-link">Recherche avancée</a>
+			</div>
+			<div class="mdl-layout-spacer"></div>
+		</div>
+	</form>
+</template>

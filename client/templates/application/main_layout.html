@@ -1,0 +1,13 @@
+<template name="mainLayout">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header {{fixDrawer}}">
+    {{> errors}}
+    {{> header}}
+    {{>yield "drawer"}}
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        {{> yield}}
+      </div>
+    </main>
+    {{>yield "footer"}}
+  </div>
+</template>

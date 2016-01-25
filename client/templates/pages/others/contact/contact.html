@@ -1,0 +1,37 @@
+<template name="contact">
+	<div class="anti-modal-box">
+		<div class="anti-modal-header">
+			<div class="anti-modal-title">Formulaire de contact</div>
+			<div class="anti-modal-closer"><i class="material-icons">&#xE5CD;</i></div>
+		</div>
+		<form action="#">
+			<div class="anti-modal-body mdl-typography--text-center">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" id="from" />
+					<label class="mdl-textfield__label" for="message">Votre e-mail...</label>
+					<span class="mdl-textfield__error">Adresse email invalide.</span>
+				</div>
+				<div class="mdl-selectfield" style="width:300px;">
+					<select id="subject">
+						<option value="default" selected>Le sujet de votre message...</option>
+						<option value="suggestion">Suggestion</option>
+						<option value="bug">Rapport de bug</option>
+						<option value="other">Autre</option>
+					</select>
+				</div>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<textarea class="mdl-textfield__input" type="text" rows="10" id="message"></textarea>
+					<label class="mdl-textfield__label" for="message">Votre message...</label>
+				</div>
+			</div>
+			<div class="anti-modal-footer">
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect modal-closer">
+					Annuler
+				</button>
+				<button id="send-email" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect modal-closer">
+					Envoyer
+				</button>
+			</div>
+		</form>
+	</div>
+</template>

@@ -1,0 +1,46 @@
+<template name="stats">
+  <div class="mdl-grid mdl-typography--text-center">
+    <div class="mdl-cell mdl-cell--12-col">
+      <h2>Statistiques</h2>
+    </div>
+  </div>
+  <div class="mdl-grid mdl-typography--text-center">
+    <div class="mdl-layout-spacer"></div>
+    <div class="mdl-cell mdl-cell--3-col">
+      <div class="mdl-selectfield">
+        <select id="from">
+          {{#each statsData}}
+            <option value="{{dateString}}">{{formatDate dateString}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--1-col">
+      <h5 style="margin-top:7px">à</h5>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+      <div class="mdl-selectfield">
+        <select id="to">
+          {{#each statsData}}
+            <option value="{{dateString}}">{{formatDate dateString}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+    <div class="mdl-layout-spacer"></div>
+  </div>
+  <div class="mdl-grid mdl-typography--text-center">
+    <div class="mdl-cell mdl-cell--4-col">
+      <h5>Taux de présence</h5>
+      <div id="presence"></div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <h5>Nombre de clics</h5>
+      <div id="click"></div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <h5>Nombre de redirections</h5>
+      <div id="redirection"></div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,64 @@
+<template name="offer">
+	<div id="offer-grid" class="mdl-grid">
+		<div class="mdl-layout-spacer"></div>
+		<div id="offer-description" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--3-col-phone">
+			<div class="mdl-card__title">
+				<h6 class="mdl-card__title-text">{{offer.position}}</h6>
+			</div>
+			<div class="mdl-card__supporting-text">
+				{{{cleanDescription offer.description.large}}}
+			</div>
+			<div class="mdl-card__actions mdl-card--border">
+			    {{#each offer.websites}}
+				    <p>
+				    	{{> websiteButton}}
+					    <a href="{{url}}" target="_blank" value="{{website.name}}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+				    		Annonce sur {{website.name}} <i class="material-icons">&#xE315;</i>
+					    </a>
+				    </p>
+			    {{/each}}
+			</div>
+			<div class="mdl-card__menu">
+			</div>
+		</div>
+		<div id="offer-info" class="mdl-card mdl-shadow--2dp mdl-cell--top mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+			<div class="mdl-card__title">
+		    	<h6 class="mdl-card__title-text">Informations</h6>
+		  	</div>
+			<div class="mdl-card__supporting-text">
+				<p><strong>Publication :</strong><br>
+					{{formatDate offer.datePub}}
+				</p>
+				<p><strong>Localisation :</strong><br>
+					{{#if offer.location}}
+						{{offer.location}}
+					{{else}}
+						Non communiqué
+					{{/if}}
+				</p>
+				<p><strong>Salaire :</strong><br>
+					{{#if offer.salary}}
+						{{offer.salary}}
+					{{else}}
+						Non communiqué
+					{{/if}}
+				</p>
+				<p><strong>Société :</strong><br>
+					{{#if offer.company}}
+						{{offer.company}}
+					{{else}}
+						Non communiqué
+					{{/if}}
+				</p>
+				<p><strong>Contrat :</strong><br>
+					{{#if offer.contractDisplayed}}
+						{{offer.contractDisplayed}}
+					{{else}}
+						Non communiqué
+					{{/if}}
+				</p>
+			</div>
+		</div>
+		<div class="mdl-layout-spacer"></div>
+	</div>
+</template>
