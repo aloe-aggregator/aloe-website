@@ -46,6 +46,6 @@ Déploiement (Prod)
    
 Plus d'explication sur notre page [docker](https://github.com/aloe-aggregator/aloe-docker)
 
-Projet pour [3IL](http://www.3il-ingenieurs.fr) 
+Dans le cadre de la 3eme année de cycle ingénieur en apprentissage à [3IL](http://www.3il-ingenieurs.fr), il est demandé de réaliser un projet de groupe sur une période de quatre mois.
  ![logo 3IL](https://upload.wikimedia.org/wikipedia/fr/thumb/d/dc/3il_ingenieurs_logo.jpg/800px-3il_ingenieurs_logo.jpg)
 
